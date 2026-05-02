@@ -54,6 +54,8 @@ libraries before costly experimental testing.
   reliable QSAR evaluation
 
 ## Repository Structure
+
+```
 AR-Inhibitor-QSAR/
 ├── README.md
 ├── notebooks/
@@ -61,8 +63,9 @@ AR-Inhibitor-QSAR/
 │   ├── 02_EDA_and_descriptors.ipynb
 │   └── 03_modeling.ipynb
 └── results/
-├── roc_curve.png
-└── feature_importance.png
+    ├── roc_curve.png
+    └── feature_importance.png
+```
 
 ## Tools and Libraries
 Python, RDKit, ChEMBL Web Resource Client, scikit-learn, 
