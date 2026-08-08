@@ -39,7 +39,7 @@ libraries before costly experimental testing.
 | Model | Test AUC | CV AUC (5-fold) | Accuracy |
 |-------|----------|-----------------|----------|
 | Random Forest | 0.919 | 0.917 ± 0.009 | 88% |
-| Logistic Regression | 0.868 | — | 83% |
+| Logistic Regression | 0.868 |  | 83% |
 
 **Key findings:**
 - Random Forest outperforms linear baseline by 5 AUC points, 
