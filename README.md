@@ -24,8 +24,7 @@ libraries before costly experimental testing.
 ## Methods
 1. **Data Curation**: Retrieved IC50 records from ChEMBL, 
    filtered for valid SMILES and nM units, removed duplicates
-2. **pIC50 Transformation**: Converted IC50 to pIC50 scale 
-   to normalize skewed bioactivity distributions
+2. **pIC50 Transformation**: Converted IC50 values to nM and defined active/inactive classes using potency thresholds.
 3. **Feature Generation**: Computed Lipinski descriptors 
    via RDKit and MACCS fingerprints. Removed low-variance 
    features (VarianceThreshold = 0.01)
@@ -42,16 +41,10 @@ libraries before costly experimental testing.
 | Logistic Regression | 0.868 |  | 83% |
 
 **Key findings:**
-- Random Forest outperforms linear baseline by 5 AUC points, 
-  confirming non-linear relationships between molecular 
-  descriptors and AR inhibitor activity
-- MW and LogP are the strongest predictors and biologically 
-  consistent with the AR's hydrophobic ligand binding pocket
-- NumHAcceptors ranks 5th, consistent with known hydrogen 
-  bonding requirements of the AR pharmacophore
-- Unstratified CV significantly underestimates performance 
-  with imbalanced datasets. Stratified CV is essential for 
-  reliable QSAR evaluation
+- Random Forest outperformed the logistic regression baseline suggesting that nonlinear relationships contribute to predictive performance.
+- MW and LogP were among the strongest predictors, consistent with the physicochemical properties of known AR ligands.
+- NumHAcceptors ranked among the top predictive features.
+- Stratified cross-validation was used to preserve class proportions across folds.
 
 ## Repository Structure
 
